@@ -1,7 +1,7 @@
 use v5.10;
 
 package lib::vendor;
-$lib::vendor::VERSION = '0.14.136';
+$lib::vendor::VERSION = '0.14.136.1';
 
 use strict;
 
@@ -63,8 +63,9 @@ sub shrink_INC {
         if ( ref($_) ) {
             # If it's a ref, key on the memory address.
             $key = int $_;
-        } elsif ( my ($dev, $inode) = stat($_) ) {
-            # If it's on the filesystem, key on the combo of dev and inode.
+        } elsif ( $^O ne 'MSWin32' and my ($dev, $inode) = stat($_) ) {
+            # If it's on the filesystem, key on the combo of dev and inode,
+            # which is not valid on MSWin32.
             $key = join( _ => $dev, $inode );
         } else {
             # Otherwise, key on the element.
@@ -84,7 +85,7 @@ lib::vendor - add vendor libraries to the module search path (@INC)
 
 =head1 VERSION
 
-version 0.14.136
+version 0.14.136.1
 
 =head1 SYNOPSIS
 
