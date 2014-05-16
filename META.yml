@@ -16,5 +16,6 @@ name: lib-vendor
 requires:
   File::Spec: '0'
   FindBin: '0'
+  perl: v5.10.0
   strict: '0'
-version: 0.14.134
+version: 0.14.136
