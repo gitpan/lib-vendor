@@ -1,7 +1,7 @@
 use v5.10;
 
 package lib::vendor;
-$lib::vendor::VERSION = '0.14.136.1';
+$lib::vendor::VERSION = '0.14.139';
 
 use strict;
 
@@ -85,7 +85,7 @@ lib::vendor - add vendor libraries to the module search path (@INC)
 
 =head1 VERSION
 
-version 0.14.136.1
+version 0.14.139
 
 =head1 SYNOPSIS
 
