@@ -1,7 +1,8 @@
 use v5.10;
 
 package lib::vendor;
-$lib::vendor::VERSION = '0.14.139';
+# ABSTRACT: add vendor libraries to the module search path (@INC)
+our $VERSION = '0.14.163'; # VERSION
 
 use strict;
 
@@ -79,13 +80,17 @@ sub shrink_INC {
 
 __END__
 
+=pod
+
+=encoding UTF-8
+
 =head1 NAME
 
 lib::vendor - add vendor libraries to the module search path (@INC)
 
 =head1 VERSION
 
-version 0.14.139
+version 0.14.163
 
 =head1 SYNOPSIS
 
@@ -139,12 +144,30 @@ what the vendor directory is.
   # $FindBin::RealBin/../this,
   # $FindBin::RealBin/../that
 
-=head1 AUTHOR
+=head1 BUGS
 
-Bob Kleemann
+Please report any bugs or feature requests on the bugtracker website
+https://github.com/rkleemann/lib-vendor/issues or by email to
+bug-lib-vendor@rt.cpan.org.
+
+When submitting a bug or request, please include a test-file or a
+patch to an existing test-file that illustrates the bug or desired
+feature.
 
 =head1 SEE ALSO
 
 L<lib>, L<mylib>, L<FindBin>
+
+=head1 AUTHOR
+
+Bob Kleemann <bobk@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2014 by Bob Kleemann.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0 (GPL Compatible)
 
 =cut
